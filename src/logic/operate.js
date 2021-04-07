@@ -26,6 +26,14 @@ const operate = (numberOne, numberTwo, operation) => {
       result = nbrOne.div(nbrTwo);
       break;
 
+    case '+/-':
+      result = numberTwo ? nbrTwo * -1 : nbrOne * -1;
+      break;
+
+    case 'AC':
+      result = 0;
+      break;
+
     default:
       break;
   }
