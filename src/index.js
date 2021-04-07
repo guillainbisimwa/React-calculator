@@ -5,7 +5,7 @@ import './index.css';
 class Calculator extends React.Component {
   render() {
     return (
-      <div />         
+      <div>Calculator</div>         
     );
   }
 }
