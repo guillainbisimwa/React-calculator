@@ -10,7 +10,7 @@ class Display extends React.Component {
   render() {
     const { result } = this.props;
     return (
-      <div>
+      <div className="element text">
         {result}
       </div>
     );

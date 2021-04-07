@@ -20,7 +20,7 @@ export default function ButtonPanel() {
         <Button name="4" />
         <Button name="5" />
         <Button name="6" />
-        <Button name="-" />
+        <Button name="−" />
       </div>
       <div>
         <Button name="1" />

@@ -5,7 +5,7 @@ class Button extends React.Component {
   // eslint-disable-next-line class-methods-use-this
   render() {
     return (
-      <div>{this.props.name}</div>
+      this.props.name === '=' ? <div className="button button-equal"><span className="text">{this.props.name}</span></div> : <div className="button"><span className="text">{this.props.name}</span></div>
 
     );
   }
