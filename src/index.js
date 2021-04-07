@@ -5,16 +5,14 @@ import './index.css';
 class Calculator extends React.Component {
   render() {
     return (
-      <div>Calculator</div>         
+      <div>Calculator</div>
     );
   }
 }
 
+// ========================================
 
-  // ========================================
-  
-  ReactDOM.render(
+ReactDOM.render(
     <Calculator />,
-    document.getElementById('root')
-  );
-  
+    document.getElementById('root'),
+);
