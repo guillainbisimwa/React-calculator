@@ -31,6 +31,8 @@ $ npm start
 
 ```
 
+Open `http://localhost:3000` to view running project in the browser.
+
 ## Author
 
 👤 **Guillain Bisimwa**
