@@ -17,7 +17,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](http://gbisimwa.me/React-calculator/)
+[Live Demo Link](https://react-calculator-g.herokuapp.com/)
 
 ## Getting Started
 
