@@ -1,6 +1,6 @@
 import operate from './operate';
 
-const operations = ['+', '−', '×', '÷', '%', 'AC', '=', '+/-'];
+const operations = ['+', '−', '×', '÷', '%', 'AC', '=', '+/-', '.'];
 
 const calculate = (data, buttonName) => {
   const { total, operation, next } = data;

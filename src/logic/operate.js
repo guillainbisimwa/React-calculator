@@ -34,6 +34,10 @@ const operate = (numberOne, numberTwo, operation) => {
       result = 0;
       break;
 
+    case '.':
+      result = 0.0;
+      break;
+
     default:
       break;
   }
