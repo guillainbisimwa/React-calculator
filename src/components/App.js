@@ -20,7 +20,6 @@ class App extends React.Component {
   handleClick = (buttonName) => {
     const result = calculate(this.state, buttonName);
     this.setState(result);
-    console.log(this.state);
   };
 
   resultHander = (total, next) => {
