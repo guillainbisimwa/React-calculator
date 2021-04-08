@@ -20,11 +20,11 @@ const calculate = (data, name) => {
       });
       return res;
     case '=':
-      if (parseFloat(total, 10) !== 0) {
+      if (parseFloat(total, 10) !== 0 && operation !== '=') {
         res = ({
           total: operate(parseFloat(total, 10), parseFloat(next, 10), operation),
           next: '',
-          operation: '',
+          operation: '=',
         });
       }
       return res;
