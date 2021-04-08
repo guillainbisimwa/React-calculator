@@ -19,7 +19,7 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
 
     case '%':
-      result = nbrOne.mod(nbrTwo);
+      result = nbrOne.div(nbrTwo);
       break;
 
     case '/':

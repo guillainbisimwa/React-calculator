@@ -20,7 +20,7 @@ const calculate = (data, name) => {
       });
       return res;
     case '=':
-      if (parseFloat(total, 10) !== 0 && operation !== '=') {
+      if (parseFloat(total, 10) !== 0 && operation !== '=' && operation !== '' && operation !== '%') {
         res = ({
           total: operate(parseFloat(total, 10), parseFloat(next, 10), operation),
           next: '',
@@ -32,11 +32,18 @@ const calculate = (data, name) => {
     case '−':
     case '/':
     case 'X':
-    case '%':
+    case '@':
       if (parseFloat(total, 10) !== 0) {
         return ({ operation: name });
       }
       break;
+    case '%':
+      res = ({
+        total: operate(parseFloat(total, 10), '100', '%'),
+        next: '',
+        operation: '%',
+      });
+      return res;
     case '1':
     case '2':
     case '3':
