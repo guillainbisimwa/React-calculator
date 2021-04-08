@@ -7,27 +7,36 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleClick = this.handleClick.bind(this);
-
     this.state = {
-      total: null,
-      next: null,
-      operation: null,
+      total: '0',
+      next: '',
+      operation: '',
     };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.resultHander = this.resultHander.bind(this);
   }
 
   handleClick = (buttonName) => {
     const result = calculate(this.state, buttonName);
-    this.setState(() => result);
+    this.setState(result);
+    console.log(this.state);
   };
 
-  // eslint-disable-next-line class-methods-use-this
+  resultHander = (total, next) => {
+    if (next) {
+      return next;
+    }
+    return total;
+  };
+
   render() {
+    const { total, next } = this.state;
     return (
-      <>
-        <Display />
+      <div>
+        <Display result={this.resultHander(total, next)} />
         <ButtonPanel clickHandler={this.handleClick} />
-      </>
+      </div>
     );
   }
 }

@@ -10,11 +10,11 @@ const operate = (numberOne, numberTwo, operation) => {
       result = nbrOne.plus(nbrTwo);
       break;
 
-    case '-':
+    case '−':
       result = nbrOne.minus(nbrTwo);
       break;
 
-    case 'x':
+    case 'X':
       result = nbrOne.times(nbrTwo);
       break;
 
@@ -41,7 +41,7 @@ const operate = (numberOne, numberTwo, operation) => {
     default:
       break;
   }
-  return result;
+  return result.toString();
 };
 
 export default operate;
