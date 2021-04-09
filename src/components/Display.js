@@ -1,21 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Display extends React.Component {
-  // eslint-disable-next-line no-useless-constructor
-  constructor(props) {
-    super(props);
-  }
+const Display = ({ result }) => (
 
-  render() {
-    const { result } = this.props;
-    return (
-      <div className="element text">
-        {result}
-      </div>
-    );
-  }
-}
+  <div className="element text">
+    {result}
+  </div>
+);
 
 Display.propTypes = {
   result: PropTypes.string,
