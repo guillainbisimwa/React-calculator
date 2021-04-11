@@ -14,6 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    color: 'white',
+    textDecoration: 'none',
   },
   title: {
     flexGrow: 1,
@@ -34,9 +36,9 @@ const Header = () => {
             Math Magicians
             </Typography>
             <Box justifyContent="flex-end">
-                <Link className={classes.menuButton} to='/'>Home</Link>
-                <Link className={classes.menuButton} color="inherit" to='/calculator'>Calculator</Link>
-                <Link className={classes.menuButton} color="inherit" to='/quote'>Quote</Link>
+                <Link className={classes.menuButton} to='/'>HOME</Link>
+                <Link className={classes.menuButton} color="inherit" to='/calculator'>CALCULATOR</Link>
+                <Link className={classes.menuButton} color="inherit" to='/quote'>QUOTE</Link>
             </Box>
             </Toolbar>
         </AppBar>
