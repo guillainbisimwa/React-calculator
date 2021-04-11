@@ -6,7 +6,7 @@ const Button = ({ name, clickHandler }) => {
     clickHandler(name);
   };
   return (
-    name === '=' ? <div className="button button-equal" onClick={() => handleClick(name)}><span className="text">{name}</span></div> : <div className="button" onClick={() => handleClick(name)}><span className="text">{name}</span></div>
+    name === '0' ? <div className="button button-equal" onClick={() => handleClick(name)}><span className="text">{name}</span></div> : <div className="button" onClick={() => handleClick(name)}><span className="text">{name}</span></div>
   );
 };
 
