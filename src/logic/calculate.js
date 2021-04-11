@@ -5,7 +5,7 @@ const calculate = (data, buttonName) => {
   const operands = ['+', 'X', '−', '÷'];
   const nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   if (buttonName === 'AC') {
-    [total, next, operation] = [null, null, null];
+    [total, next, operation] = ['0', null, null];
   }
   if (buttonName === '+/-') {
     if (total) (total *= -1);
@@ -13,7 +13,7 @@ const calculate = (data, buttonName) => {
     operation = null;
   }
   if (buttonName === '%') {
-    if (total) next = (0.01 * total);
+    if (total) next = (0.01 * total).toString();
   }
   if (buttonName === '=') {
     if (total && next && operation) {
@@ -27,7 +27,11 @@ const calculate = (data, buttonName) => {
   } else if (operation && nums.includes(buttonName)) {
     next = next ? next + buttonName : buttonName;
   } else if (total && nums.includes(buttonName)) {
-    total = buttonName;
+    if (total === '0') {
+      total = buttonName;
+    } else {
+      total = buttonName + total;
+    }
   } else if (nums.includes(buttonName)) {
     total = total ? total + buttonName : buttonName;
   } else if (!next && !operation && buttonName === '.') {

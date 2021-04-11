@@ -1,15 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Routes from './Routes';
 import './index.css';
 
-const Calculator = () => (
-    <App />
-);
-
-// ========================================
-
-ReactDOM.render(
-    <Calculator />,
-    document.getElementById('root'),
-);
+ReactDOM.render(<Routes />, document.getElementById('root'));

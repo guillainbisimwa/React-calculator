@@ -1,18 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ name, clickHandler }) => {
+const Button = ({
+  name, color, clickHandler, wide,
+}) => {
   const handleClick = (name) => {
     clickHandler(name);
   };
-  return (
-    name === '=' ? <div className="button button-equal" onClick={() => handleClick(name)}><span className="text">{name}</span></div> : <div className="button" onClick={() => handleClick(name)}><span className="text">{name}</span></div>
-  );
+
+  const colorBtn = (wideBool) => {
+    if (wideBool) {
+      return `${color} button-equal`;
+    }
+    return `${color}`;
+  };
+
+  return <div className={colorBtn(wide)} onClick={() => handleClick(name)}><span className="text">{name}</span></div>;
 };
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
+  color: PropTypes.string,
+  wide: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  color: 'button btn-primary',
+  wide: false,
 };
 
 export default Button;
