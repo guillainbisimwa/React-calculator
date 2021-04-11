@@ -6,6 +6,8 @@
 
 Additional description about the project and its features.
 
+<img src="./assets/calculator.gif" alt="Screenshot" style="margin: auto; display: block">
+
 ## Built With
 
 - React,
