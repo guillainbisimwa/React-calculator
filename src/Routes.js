@@ -11,7 +11,7 @@ const Routes = () => (
     <Container maxWidth="lg">
       <Header />
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/calculator" component={Calculator} />
         <Route path="/quote" component={Quote} />
       </Switch>
