@@ -34,7 +34,7 @@ const ButtonPanel = (props) => {
         <Button name="+" clickHandler={handleClick} />
       </div>
       <div>
-        <Button name="0" wide='true' color='button' clickHandler={handleClick} />
+        <Button name="0" wide={true} color='button' clickHandler={handleClick} />
         <Button name="." color='button' clickHandler={handleClick} />
         <Button name="=" clickHandler={handleClick} />
       </div>
