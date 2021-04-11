@@ -72,6 +72,14 @@ body {
   justify-content: flex-end;
 }
 
-.vvv {
-  background-image: -webkit-linear-gradient(top, #ee6521, #f7f4f4) !important;
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #f5913e, #f59f59) !important;
+  box-shadow: 0 8px 10px 0 rgb(0 0 0 / 30%), inset 0 4px 1px 1px #e0bd9f,
+    inset 0 -3px 1px 1px rgb(204 198 197 / 50%);
+  color: #ffff;
+}
+
+.btn-primary:hover {
+  background-image: -webkit-linear-gradient(top, #be773c, #f4f1ee);
+  color: rgb(215, 216, 216);
 }
