@@ -1,17 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Container } from '@material-ui/core';
 import Home from './screens/Home';
 import Calculator from './screens/Calculator';
 import Quote from './screens/Quote';
+import Header from './screens/Header';
 
 const Routes = () => (
-    <BrowserRouter>
+  <BrowserRouter>
+    <Container maxWidth="lg">
+      <Header />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/calculator" component={Calculator} />
         <Route path="/quote" component={Quote} />
       </Switch>
-    </BrowserRouter>
+    </Container>
+  </BrowserRouter>
 );
 
 export default Routes;

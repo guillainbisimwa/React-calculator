@@ -25,21 +25,21 @@ const Header = () => {
 
   return (
     <div width={1} className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-          Math Magicians
-          </Typography>
-          <Box justifyContent="flex-end">
-            <Button color="inherit">Header</Button>
-            <Button color="inherit">Calculator</Button>
-            <Button color="inherit">Quote</Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
+        <AppBar position="static">
+            <Toolbar>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+            Math Magicians
+            </Typography>
+            <Box justifyContent="flex-end">
+                <Button className={classes.menuButton} color="inherit">Home</Button>
+                <Button className={classes.menuButton} color="inherit">Calculator</Button>
+                <Button className={classes.menuButton} color="inherit">Quote</Button>
+            </Box>
+            </Toolbar>
+        </AppBar>
     </div>
   );
 };
