@@ -16,4 +16,46 @@ describe('all calculator buttons works correctly', () => {
     expect(calculate(data, 'AC')).toEqual({ total: '0', next: null, operation: null });
     expect(calculate(data, 'AC')).not.toEqual({ total: 0, next: null, operation: null });
   });
+
+  it('AC resets calculator state', () => {
+    const data = { total: '3', operation: '+', next: '3' };
+    expect(calculate(data, 'AC')).toEqual({ total: '0', next: null, operation: null });
+    expect(calculate(data, 'AC')).not.toEqual({ total: 0, next: null, operation: null });
+  });
+
+  it('+/- clicked', () => {
+    const data = { total: '9', operation: '+/-', next: null };
+    expect(calculate(data, '+/-')).toEqual({ total: -9, next: null, operation: null });
+    expect(calculate(data, '+/-')).not.toEqual({ total: 9, next: null, operation: null });
+  });
+
+  it('% clicked', () => {
+    const data = { total: '6', operation: '%', next: null };
+    expect(calculate(data, '%')).toEqual({ total: '6', next: '0.06', operation: '%' });
+    expect(calculate(data, '%')).not.toEqual({ total: '6', next: '0.06', operation: null });
+  });
+
+  it('÷ clicked', () => {
+    const data = { total: '6', operation: '÷', next: '2' };
+    expect(calculate(data, '÷')).toEqual({ total: '6', next: '2', operation: '÷' });
+    expect(calculate(data, '÷')).not.toEqual({ total: '3', next: '2', operation: '÷' });
+  });
+
+  it('X clicked', () => {
+    const data = { total: '6', operation: 'X', next: '2' };
+    expect(calculate(data, 'X')).toEqual({ total: '6', next: '2', operation: 'X' });
+    expect(calculate(data, 'X')).not.toEqual({ total: '12', next: '2', operation: 'X' });
+  });
+
+  it('− clicked', () => {
+    const data = { total: '12', operation: '−', next: '2' };
+    expect(calculate(data, '−')).toEqual({ total: '12', next: '2', operation: '−' });
+    expect(calculate(data, '−')).not.toEqual({ total: '6', next: '2', operation: null });
+  });
+
+  it('+ clicked', () => {
+    const data = { total: '120', operation: '+', next: '20' };
+    expect(calculate(data, '+')).toEqual({ total: '120', next: '20', operation: '+' });
+    expect(calculate(data, '+')).not.toEqual({ total: '120', next: '2', operation: null });
+  });
 });
