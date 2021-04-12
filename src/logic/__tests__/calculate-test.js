@@ -58,4 +58,27 @@ describe('all calculator buttons works correctly', () => {
     expect(calculate(data, '+')).toEqual({ total: '120', next: '20', operation: '+' });
     expect(calculate(data, '+')).not.toEqual({ total: '120', next: '2', operation: null });
   });
+
+  it('should return the real value for total and null for next and operation', () => {
+    const data = { total: '20', next: '4', operation: '+' };
+    expect(calculate(data, '=')).toEqual({ total: '24', next: null, operation: null });
+    expect(calculate(data, '=')).not.toEqual({ total: 24, next: null, operation: null });
+    expect(calculate(data, '=')).not.toEqual({ total: 24, next: null, operation: '+' });
+  });
+
+  it('should return the same result if next contains .', () => {
+    const data = { total: '6', next: '3.', operation: '+' };
+    expect(calculate(data, '.')).toEqual({ total: '6', next: '3.', operation: '+' });
+    expect(calculate(data, '.')).not.toEqual({ total: '3.6', next: null, operation: '+' });
+  });
+
+  it('should add a . to the total value if both next and operation are null', () => {
+    const data = { total: '5', next: null, operation: null };
+    expect(calculate(data, '.')).toEqual({ total: '5.', next: null, operation: null });
+  });
+
+  it('should add a . to the next value', () => {
+    const data = { total: '5', next: '4', operation: '+' };
+    expect(calculate(data, '.')).toEqual({ total: '5', next: '4.', operation: '+' });
+  });
 });
