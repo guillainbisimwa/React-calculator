@@ -10,12 +10,15 @@ Additional description about the project and its features.
 
 ## Built With
 
-- React,
-- React-DOM,
+- React
+- React-DOM
 - [create-react-app](https://github.com/facebook/create-react-app)
-- npm,
-- CSS,
+- npm
+- CSS3
 - ES6
+- Jest
+- Material UI
+- Big.js
 
 ## Live Demo
 
@@ -34,6 +37,15 @@ $ npm start
 ```
 
 Open `http://localhost:3000` to view running project in the browser.
+
+## Test
+
+To run the integration Tests locally using [Jest](https://jestjs.io/), just type the following commands over the terminal in Linux or Mac or the Windows cmd console:
+
+```s
+$ npm test
+
+```
 
 ## Author
 
